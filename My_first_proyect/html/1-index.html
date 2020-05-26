@@ -1,0 +1,34 @@
+<html>
+    <body>
+      {# para comentarios #}
+      {% comment %}
+      commentario de varias lineas
+      {% endcomment %}
+
+      {% include "header/barra.html" %}
+    <h1 style="color: red"> Hello World in html!</h1>
+
+    {% if name == 'Profesor Juan' %}
+
+    <p> El curso lo imparte el profesor titular</p>
+
+    {% else %}
+
+    <p> El curso lo imparte el profesor suplente </p>
+    {% endif %}
+    <p> el nombre del profesor es: {{name|upper}} {{last.upper}} y tiene {{my_age}} años</p>
+    <p>la hora es {{date.day}}/{{date.month}}/{{date.year}}</p>
+    <p><strong>Temas del curso</strong></p>
+    <p>
+      {% if temas %}
+      <ul>
+	{% for the_list in temas %}
+	<li> {{the_list}}</li>
+	{% endfor %}
+      </ul>
+      {% else %}
+    <p> No Hay elementos en la lista </p>
+    {% endif %}
+    </p>
+    </body>
+</html>
