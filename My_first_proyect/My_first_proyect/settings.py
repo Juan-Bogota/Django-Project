@@ -54,7 +54,7 @@ ROOT_URLCONF = 'My_first_proyect.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/juan/DjangoProyectos/My_first_proyect/My_first_proyect/html'],
+        'DIRS': ['/home/vagrant/Django-Project/My_first_proyect/My_first_proyect/html'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
