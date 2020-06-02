@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <p>
+        Estas buscando: <strong> {{query}}</strong>
+    </p>
+
+    {% if articulos %}
+    <p> Articulos encotrados: {{articulos|length}} articulos</p>
+
+    <ul>
+        {% for art in articulos %}
+        <li>
+            {{art.nombre}} {{art.seccion}} {{art.precio}}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Articulo no encontrado</p>
+    {% endif %}
+</body>
+
+</html>
